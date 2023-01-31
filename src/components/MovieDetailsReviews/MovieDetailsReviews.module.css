@@ -1,0 +1,6 @@
+.reviews {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 20px;
+}

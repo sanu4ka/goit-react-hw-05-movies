@@ -1,0 +1,10 @@
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 20px;
+}
+.informaton {
+    display: inline-flex;
+    gap: 15px;
+}
