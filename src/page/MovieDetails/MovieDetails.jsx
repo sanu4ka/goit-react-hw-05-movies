@@ -12,18 +12,21 @@ const MovieDetails = () => {
   useEffect(() => {
     getMovieDetails(movieId)
       .then(res => {
-        if (res.status !== 'Released') {
-          console.log(res.status_message);
+        if (res.status === 'Released') {
+          setMovieDetails(res);
           return;
         }
 
-        setMovieDetails(res);
+        alert(res.status_message);
       })
-      .catch(error => console.log(error));
+      .catch();
   }, [movieId]);
-
   if (!movieDetails) {
-    return;
+    return (
+      <section className={css.details}>
+        <ButtonBack />
+      </section>
+    );
   }
 
   const {
