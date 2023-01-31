@@ -16,8 +16,6 @@ const MovieDetails = () => {
           setMovieDetails(res);
           return;
         }
-
-        alert(res.status_message);
       })
       .catch();
   }, [movieId]);
@@ -25,6 +23,7 @@ const MovieDetails = () => {
     return (
       <section className={css.details}>
         <ButtonBack />
+        <p>Unfortunately, there is no description for this movie</p>
       </section>
     );
   }
