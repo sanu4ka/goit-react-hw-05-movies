@@ -10,17 +10,15 @@ const MovieDetailsCast = () => {
   useEffect(() => {
     getMovieDetailsCast(movieId)
       .then(res => {
-        if (res.cast) {
-          setMovieDetailsCast(res.cast);
-        } else {
-          console.log('результатів немає', res);
-        }
+        setMovieDetailsCast(res.cast);
       })
-      .catch(error => console.log(error));
+      .catch();
   }, [movieId]);
 
   if (!movieDetailsCast) {
-    return;
+    return (
+      <p className={css.cast}>Unfortunately, there is no cast for this movie</p>
+    );
   }
 
   return (

@@ -14,11 +14,15 @@ const MovieDetailsReviews = () => {
           setMovieDetailsReviews(res.results);
         }
       })
-      .catch(error => console.log(error));
+      .catch();
   }, [movieId]);
 
   if (!movieDetailsReviews) {
-    return;
+    return (
+      <p className={css.reviews}>
+        Unfortunately, there is no reviews for this movie
+      </p>
+    );
   }
 
   return (
