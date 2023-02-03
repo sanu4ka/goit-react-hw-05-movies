@@ -7,10 +7,20 @@ export const Layout = () => {
     <>
       <header className={css.header}>
         <nav>
-          <NavLink to="/" >
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? css.nav_active : undefined
+            }
+            to="/"
+          >
             Home
           </NavLink>
-          <NavLink to="/movies" >
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? css.nav_active : undefined
+            }
+            to="/movies"
+          >
             Movies
           </NavLink>
         </nav>

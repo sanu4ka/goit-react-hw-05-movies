@@ -13,9 +13,16 @@
   font-size: 24px;
 }
 
+.header a {
+  color: black;
+  text-decoration: none;
+}
 
-.navLink:hover,
-.navLink:focus {
-  color: purple;
-  text-decoration: underline;
+.header a.nav_active {
+  color: cyan;
+}
+
+.header a:hover,
+.header a:focus {
+  color: red;
 }

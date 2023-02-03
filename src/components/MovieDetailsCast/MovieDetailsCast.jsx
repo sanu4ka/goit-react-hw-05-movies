@@ -16,11 +16,8 @@ const MovieDetailsCast = () => {
   }, [movieId]);
 
   if (!movieDetailsCast) {
-    return (
-      <p className={css.cast}>Unfortunately, there is no cast for this movie</p>
-    );
+    return <p className={css.cast}>We don`t have cast for this movie</p>;
   }
-
   return (
     <>
       <ul className={css.cast}>

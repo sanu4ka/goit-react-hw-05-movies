@@ -18,13 +18,8 @@ const MovieDetailsReviews = () => {
   }, [movieId]);
 
   if (!movieDetailsReviews) {
-    return (
-      <p className={css.reviews}>
-        Unfortunately, there is no reviews for this movie
-      </p>
-    );
+    return <p className={css.reviews}>We don`t have reviews for this movie</p>;
   }
-
   return (
     <>
       <ul className={css.reviews}>
